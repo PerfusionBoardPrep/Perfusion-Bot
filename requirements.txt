@@ -3,8 +3,9 @@ faiss-cpu
 tiktoken==0.8.0
 fastembed==0.4.2
 streamlit-chat==0.1.1
-langchain==0.3.7
+langchain
 langchain-community==0.3.7
 langchain-core==0.3.19
+pydantic
 pysqlite3-binary==0.5.3
 protobuf==3.20.*
