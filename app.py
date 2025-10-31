@@ -40,9 +40,11 @@ db = FAISS.load_local("latest_faiss_index", embeddings, allow_dangerous_deserial
 
 retriever = db.as_retriever(search_kwargs={"k": 3})
 
-llm_1 = ChatGroq(temperature=0, model_name="llama3-70b-8192", api_key = api_key_1 )
+# Rebuild the model
 
-llm_2 = ChatGroq(temperature=0, model_name="llama3-70b-8192", api_key = api_key_2)
+llm_1 = ChatGroq(temperature=0, model_name="llama-3.3-70b-versatile", api_key = api_key_1 )
+
+llm_2 = ChatGroq(temperature=0, model_name="llama-3.3-70b-versatile", api_key = api_key_2)
 
 system_prompt = (
     "You are an assistant for medical question-answering tasks. "
